@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>West End Walks — Dog Walking in NDG, Westmount, Hampstead & Côte Saint-Luc</title>
+<meta name="description" content="Neighborhood dog walking in Montreal's west end. Solo walks from $20, group walks from $15. Text 514-294-3808 or book online.">
+<meta property="og:title" content="West End Walks — Dog Walking in Montreal's West End">
+<meta property="og:description" content="Solo walks from $20, group walks from $15. NDG, Westmount, Hampstead, Côte Saint-Luc.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#3f7d5a;
+  --green-dark:#22463a;
+  --green-deep:#1a3a2e;
+  --cream:#f8f5ee;
+  --tan:#e8e0cf;
+  --ink:#26302b;
+  --muted:#5d6b63;
+  --white:#ffffff;
+  --gold:#c9a86a;
+  --radius:16px;
+  --shadow:0 2px 14px rgba(38,48,43,.07);
+  --shadow-lift:0 10px 28px rgba(38,48,43,.13);
+  --serif:"Fraunces",Georgia,serif;
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.6}
+img{max-width:100%;display:block}
+a{color:var(--green-dark)}
+h1,h2{font-family:var(--serif)}
+
+/* ---------- Header ---------- */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(248,245,238,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--tan);
+}
+.header-inner{
+  max-width:1020px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 20px;
+}
+.logo{display:flex;align-items:center;gap:9px;text-decoration:none}
+.logo svg{width:26px;height:26px;flex:none}
+.logo b{font-family:var(--serif);font-weight:700;font-size:1.2rem;letter-spacing:-.01em;color:var(--green-dark)}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-block;
+  padding:13px 26px;
+  border-radius:999px;
+  font-weight:700;font-size:1rem;font-family:var(--sans);
+  text-decoration:none;text-align:center;
+  border:2px solid transparent;
+  cursor:pointer;
+  transition:transform .12s ease, background .15s ease, box-shadow .15s ease;
+}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--green);color:var(--white);box-shadow:0 4px 14px rgba(63,125,90,.35)}
+.btn-primary:hover{background:var(--green-dark);box-shadow:0 6px 18px rgba(34,70,58,.35)}
+.btn-light{background:var(--cream);color:var(--green-dark)}
+.btn-light:hover{background:var(--white)}
+.btn-ghost{border-color:rgba(248,245,238,.55);color:var(--cream);background:transparent}
+.btn-ghost:hover{background:rgba(248,245,238,.12)}
+.btn-small{padding:9px 18px;font-size:.9rem}
+
+/* ---------- Layout ---------- */
+section{padding:64px 20px}
+.wrap{max-width:1020px;margin:0 auto}
+h2{font-size:2rem;letter-spacing:-.01em;margin-bottom:8px;color:var(--green-dark)}
+.section-sub{color:var(--muted);margin-bottom:32px;max-width:580px}
+.kicker{
+  display:block;font-size:.78rem;font-weight:800;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--green);margin-bottom:10px;
+}
+
+/* ---------- Hero ---------- */
+.hero{
+  background:linear-gradient(160deg,var(--green-dark) 0%,var(--green-deep) 100%);
+  color:var(--cream);
+  padding:88px 20px 72px;
+}
+.hero .wrap{max-width:760px}
+.area-chip{
+  display:inline-block;
+  background:rgba(248,245,238,.12);
+  border:1px solid rgba(248,245,238,.25);
+  color:var(--cream);
+  font-size:.84rem;font-weight:600;letter-spacing:.02em;
+  padding:7px 16px;border-radius:999px;
+  margin-bottom:22px;
+}
+.hero h1{font-size:2.9rem;line-height:1.12;letter-spacing:-.01em;margin-bottom:18px;color:var(--white)}
+.hero p{font-size:1.15rem;color:rgba(248,245,238,.85);max-width:560px;margin-bottom:30px}
+.hero-buttons{display:flex;gap:14px;flex-wrap:wrap}
+
+/* ---------- Trust strip ---------- */
+.trust{background:var(--white);border-bottom:1px solid var(--tan);padding:0}
+.trust .wrap{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:0;
+}
+.trust-item{
+  padding:22px 18px;
+  display:flex;align-items:center;gap:12px;
+  font-size:.9rem;font-weight:600;color:var(--ink);
+}
+.trust-item + .trust-item{border-left:1px solid var(--tan)}
+.trust-item svg{width:22px;height:22px;flex:none;color:var(--green)}
+
+/* ---------- Pricing ---------- */
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.price-card{
+  background:var(--white);
+  border:1px solid var(--tan);
+  border-radius:var(--radius);
+  padding:30px 26px;
+  box-shadow:var(--shadow);
+  position:relative;
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.price-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift)}
+.price-card.featured{border:2px solid var(--green)}
+.badge{
+  position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+  background:var(--green);color:var(--white);
+  font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+  padding:5px 14px;border-radius:999px;white-space:nowrap;
+}
+.price-card h3{font-size:1.05rem;margin-bottom:8px}
+.price{font-family:var(--serif);font-size:2.4rem;font-weight:700;color:var(--green-dark);letter-spacing:-.01em}
+.price small{font-family:var(--sans);font-size:.9rem;font-weight:600;color:var(--muted)}
+.group-rate{
+  display:inline-block;margin-top:10px;
+  background:var(--cream);border:1px solid var(--tan);
+  border-radius:999px;padding:5px 13px;
+  font-size:.84rem;font-weight:700;color:var(--green-dark);
+}
+.price-card p{color:var(--muted);font-size:.94rem;margin-top:12px}
+.pricing-foot{color:var(--muted);font-size:.92rem;margin-top:22px;max-width:640px}
+
+/* ---------- Steps ---------- */
+.steps-section{background:var(--white);border-top:1px solid var(--tan);border-bottom:1px solid var(--tan)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{background:var(--cream);border:1px solid var(--tan);border-radius:var(--radius);padding:26px}
+.step-num{
+  width:34px;height:34px;border-radius:50%;
+  background:var(--green);color:var(--white);
+  font-weight:800;display:flex;align-items:center;justify-content:center;
+  margin-bottom:14px;
+}
+.step h3{font-size:1.02rem;margin-bottom:5px}
+.step p{color:var(--muted);font-size:.94rem}
+
+/* ---------- Gallery ---------- */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.tile{
+  aspect-ratio:1/1;
+  background:linear-gradient(150deg,var(--tan),#efe8d8);
+  border-radius:var(--radius);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--muted);font-size:.85rem;font-weight:600;
+  text-align:center;padding:12px;
+}
+
+/* ---------- Reviews ---------- */
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.review{background:var(--white);border:1px solid var(--tan);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+.review p{font-size:.96rem;margin-bottom:14px}
+.review .who{color:var(--muted);font-size:.85rem;font-weight:600}
+.stars{color:var(--gold);letter-spacing:2px;margin-bottom:12px;font-size:.95rem}
+
+/* ---------- Form ---------- */
+.form-section{background:var(--white);border-top:1px solid var(--tan)}
+form{max-width:580px}
+.field{margin-bottom:20px}
+label{display:block;font-weight:700;font-size:.9rem;margin-bottom:7px}
+label .opt{font-weight:500;color:var(--muted)}
+input[type=text],input[type=tel],input[type=email],select,textarea{
+  width:100%;
+  padding:13px 15px;
+  font-size:1rem;font-family:var(--sans);
+  border:1.5px solid var(--tan);
+  border-radius:11px;
+  background:var(--cream);
+  color:var(--ink);
+}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--green);border-color:var(--green)}
+textarea{resize:vertical;min-height:90px}
+.days,.choices{display:flex;flex-wrap:wrap;gap:9px}
+.pill{position:relative}
+.pill input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.pill span{
+  display:inline-block;
+  padding:9px 15px;border-radius:999px;
+  border:1.5px solid var(--tan);background:var(--cream);
+  font-size:.9rem;font-weight:600;cursor:pointer;
+  user-select:none;
+}
+.pill input:checked + span{background:var(--green);border-color:var(--green);color:var(--white)}
+.pill input:focus-visible + span{outline:2px solid var(--green-dark)}
+.hint{color:var(--muted);font-size:.85rem;margin-top:7px}
+.form-note{color:var(--muted);font-size:.88rem;margin-top:16px}
+#form-status{margin-top:16px;font-weight:700;display:none;padding:15px;border-radius:11px}
+#form-status.ok{display:block;background:#e7f2ea;color:var(--green-dark)}
+#form-status.err{display:block;background:#f9e9e6;color:#9a3b2e}
+
+/* ---------- Footer ---------- */
+footer{background:var(--green-deep);color:rgba(248,245,238,.75);padding:48px 20px;font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap}
+footer strong{color:var(--cream);font-family:var(--serif);font-size:1.05rem}
+footer a{color:var(--cream)}
+
+/* ---------- Mobile ---------- */
+@media (max-width:760px){
+  .pricing-grid,.steps,.reviews{grid-template-columns:1fr}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .hero h1{font-size:2.1rem}
+  .hero{padding:64px 20px 56px}
+  section{padding:48px 20px}
+  .price-card.featured{order:-1}
+  .trust .wrap{grid-template-columns:1fr 1fr}
+  .trust-item{padding:16px 14px}
+  .trust-item:nth-child(3){border-left:none}
+  .trust-item:nth-child(n+3){border-top:1px solid var(--tan)}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="#top" aria-label="West End Walks — home">
+      <svg viewBox="0 0 24 24" fill="currentColor" style="color:var(--green)" aria-hidden="true">
+        <ellipse cx="7" cy="7.5" rx="2.1" ry="2.8"/>
+        <ellipse cx="17" cy="7.5" rx="2.1" ry="2.8"/>
+        <ellipse cx="3.4" cy="12.4" rx="1.9" ry="2.5"/>
+        <ellipse cx="20.6" cy="12.4" rx="1.9" ry="2.5"/>
+        <path d="M12 11c-2.6 0-5.4 2.5-5.4 5.2 0 1.7 1.2 2.8 2.9 2.8 1 0 1.7-.4 2.5-.4s1.5.4 2.5.4c1.7 0 2.9-1.1 2.9-2.8C17.4 13.5 14.6 11 12 11z"/>
+      </svg>
+      <b>West End Walks</b>
+    </a>
+    <a class="btn btn-primary btn-small" href="sms:15142943808">Text 514-294-3808</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <span class="area-chip">NDG · Westmount · Hampstead · Côte Saint-Luc</span>
+    <h1>Your dog gets a real walk. You get your day back.</h1>
+    <p>West End Walks is a neighborhood dog walking service based in Montreal's west end. The same walker every time, rain or shine. Solo and group walks from $15.</p>
+    <div class="hero-buttons">
+      <a class="btn btn-light" href="#book">Book a walk</a>
+      <a class="btn btn-ghost" href="sms:15142943808">Text us</a>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+      Free meet &amp; greet before the first walk
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 14 0v1"/></svg>
+      Same walker every time
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.3-7-11a7 7 0 0 1 14 0c0 5.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+      Local to the west end
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+      No contracts — pay per walk
+    </div>
+  </div>
+</div>
+
+<section id="pricing">
+  <div class="wrap">
+    <span class="kicker">Pricing</span>
+    <h2>Simple rates, no surprises</h2>
+    <p class="section-sub">Pay per walk. Group walks cost less — your dog walks with one or two friendly dogs from the neighborhood.</p>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <h3>30-minute walk</h3>
+        <div class="price">$20</div>
+        <span class="group-rate">Group walk: $15</span>
+        <p>A good loop around the neighborhood. Works well for older dogs or a quick midday break.</p>
+      </div>
+      <div class="price-card featured">
+        <span class="badge">Most popular</span>
+        <h3>1-hour walk</h3>
+        <div class="price">$30</div>
+        <span class="group-rate">Group walk: $25</span>
+        <p>The full walk: park time, sniffing, proper exercise. Best value per minute.</p>
+      </div>
+      <div class="price-card">
+        <h3>Extra time</h3>
+        <div class="price">+$5 <small>/ 15 min</small></div>
+        <p>Added past the hour, for high-energy dogs that need more than sixty minutes.</p>
+      </div>
+    </div>
+    <p class="pricing-foot">Not sure if your dog suits a group? That's what the meet &amp; greet is for. Dogs are only grouped once we know they get along.</p>
+  </div>
+</section>
+
+<section class="steps-section" id="how">
+  <div class="wrap">
+    <span class="kicker">Booking</span>
+    <h2>How it works</h2>
+    <p class="section-sub">Three steps, no apps to download.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Send the form</h3>
+        <p>Fill out the booking form below, or just text us if that's easier.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Meet &amp; greet</h3>
+        <p>We text you back to set up a quick, free hello, so your dog meets their walker before the first walk.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Walks start</h3>
+        <p>Your dog gets walked on the days you picked. That's it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="photos">
+  <div class="wrap">
+    <span class="kicker">Gallery</span>
+    <h2>Dogs we walk</h2>
+    <p class="section-sub">Photos coming as owners give the okay.</p>
+    <div class="gallery">
+      <div class="tile">Photo coming soon</div>
+      <div class="tile">Photo coming soon</div>
+      <div class="tile">Photo coming soon</div>
+      <div class="tile">Photo coming soon</div>
+      <div class="tile">Photo coming soon</div>
+      <div class="tile">Photo coming soon</div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <span class="kicker">Reviews</span>
+    <h2>What owners say</h2>
+    <div class="reviews">
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>[ Review from a client goes here. ]</p>
+        <div class="who">— [First name], [neighborhood]</div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>[ Review from a client goes here. ]</p>
+        <div class="who">— [First name], [neighborhood]</div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>[ Review from a client goes here. ]</p>
+        <div class="who">— [First name], [neighborhood]</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="form-section" id="book">
+  <div class="wrap">
+    <span class="kicker">Book</span>
+    <h2>Book a walk</h2>
+    <p class="section-sub">Fill this out and we'll text you back, usually the same day.</p>
+    <form id="booking-form" method="POST">
+      <div class="field">
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" required autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="contact">Phone or email</label>
+        <input type="text" id="contact" name="contact" required placeholder="So we can reply">
+      </div>
+      <div class="field">
+        <label for="address">Address <span class="opt">(street + neighborhood is fine)</span></label>
+        <input type="text" id="address" name="address" required autocomplete="street-address">
+      </div>
+      <div class="field">
+        <label for="dog">Dog's name</label>
+        <input type="text" id="dog" name="dog_name" required>
+      </div>
+      <div class="field">
+        <label for="breed">Breed</label>
+        <input type="text" id="breed" name="breed" required>
+      </div>
+      <div class="field">
+        <label>Which days?</label>
+        <div class="days">
+          <label class="pill"><input type="checkbox" name="days" value="Mon"><span>Mon</span></label>
+          <label class="pill"><input type="checkbox" name="days" value="Tue"><span>Tue</span></label>
+          <label class="pill"><input type="checkbox" name="days" value="Wed"><span>Wed</span></label>
+          <label class="pill"><input type="checkbox" name="days" value="Thu"><span>Thu</span></label>
+          <label class="pill"><input type="checkbox" name="days" value="Fri"><span>Fri</span></label>
+          <label class="pill"><input type="checkbox" name="days" value="Sat"><span>Sat</span></label>
+          <label class="pill"><input type="checkbox" name="days" value="Sun"><span>Sun</span></label>
+        </div>
+      </div>
+      <div class="field">
+        <label for="time">Preferred time</label>
+        <input type="text" id="time" name="preferred_time" placeholder="e.g. around noon, flexible" required>
+      </div>
+      <div class="field">
+        <label for="length">Walk length</label>
+        <select id="length" name="walk_length" required>
+          <option value="">Choose one</option>
+          <option>30 minutes</option>
+          <option>1 hour</option>
+          <option>Longer than an hour</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Are group walks okay?</label>
+        <div class="choices">
+          <label class="pill"><input type="radio" name="group_ok" value="Group is fine" required><span>Group is fine</span></label>
+          <label class="pill"><input type="radio" name="group_ok" value="Solo only"><span>Solo only</span></label>
+          <label class="pill"><input type="radio" name="group_ok" value="Not sure"><span>Not sure</span></label>
+        </div>
+        <p class="hint">Group walks are cheaper: $15 for 30 minutes, $25 for an hour. Your dog walks with one or two friendly, compatible dogs.</p>
+      </div>
+      <div class="field">
+        <label for="notes">Anything else? <span class="opt">(optional — leash habits, gate code, vet info)</span></label>
+        <textarea id="notes" name="notes"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" id="submit-btn">Send booking request</button>
+      <div id="form-status" role="status"></div>
+      <p class="form-note">Prefer texting? Skip the form: <a href="sms:15142943808">514-294-3808</a></p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <strong>West End Walks</strong><br>
+      Neighborhood dog walking, Montreal west end.<br>
+      NDG · Westmount · Hampstead · Côte Saint-Luc &amp; nearby
+    </div>
+    <div>
+      Text or call: <a href="tel:5142943808">514-294-3808</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ============================================================
+// FORM DELIVERY
+// Once Formspree is set up, paste the endpoint URL between the
+// quotes below (looks like: https://formspree.io/f/abcd1234).
+// Until then, the form falls back to opening the visitor's
+// texting app pre-filled with the request.
+// ============================================================
+const FORMSPREE_ENDPOINT = "";
+
+const form = document.getElementById("booking-form");
+const statusBox = document.getElementById("form-status");
+const submitBtn = document.getElementById("submit-btn");
+
+form.addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const data = new FormData(form);
+  const days = data.getAll("days").join(", ") || "not specified";
+
+  if (FORMSPREE_ENDPOINT) {
+    // Send straight to the inbox via Formspree
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending…";
+    data.set("days", days);
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        body: data,
+        headers: { "Accept": "application/json" }
+      });
+      if (res.ok) {
+        form.reset();
+        statusBox.className = "ok";
+        statusBox.textContent = "Got it — we'll text you back soon.";
+      } else {
+        throw new Error("Formspree error");
+      }
+    } catch (err) {
+      statusBox.className = "err";
+      statusBox.textContent = "Something went wrong. Just text us instead: 514-294-3808.";
+    }
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Send booking request";
+  } else {
+    // Fallback: open the visitor's SMS app pre-filled
+    const msg =
+      "Hi, booking request from the website:\n" +
+      "Name: " + data.get("name") + "\n" +
+      "Contact: " + data.get("contact") + "\n" +
+      "Address: " + data.get("address") + "\n" +
+      "Dog: " + data.get("dog_name") + " (" + data.get("breed") + ")\n" +
+      "Days: " + days + "\n" +
+      "Time: " + data.get("preferred_time") + "\n" +
+      "Length: " + data.get("walk_length") + "\n" +
+      "Group walks: " + data.get("group_ok") +
+      (data.get("notes") ? "\nNotes: " + data.get("notes") : "");
+    window.location.href = "sms:15142943808?&body=" + encodeURIComponent(msg);
+    statusBox.className = "ok";
+    statusBox.textContent = "Your texting app should open with the request filled in — just hit send.";
+  }
+});
+</script>
+
+</body>
+</html>
