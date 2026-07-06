@@ -7,6 +7,9 @@
 <meta name="description" content="Neighborhood dog walking in Westmount, NDG, Hampstead, and Côte Saint-Luc. Solo walks from $20, group walks from $15. Text 514-294-3808 or book online.">
 <meta property="og:title" content="West End Walks — Dog Walking in Westmount, NDG, Hampstead & Côte Saint-Luc">
 <meta property="og:description" content="Solo walks from $20, group walks from $15. Westmount, NDG, Hampstead, Côte Saint-Luc.">
+<meta property="og:image" content="https://west-end-walks.pages.dev/logo.png">
+<link rel="icon" type="image/svg+xml" href="logo.svg">
+<link rel="apple-touch-icon" href="logo.png">
 <link rel="alternate" hreflang="en" href="index.html">
 <link rel="alternate" hreflang="fr" href="fr.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -91,7 +94,10 @@ h2{font-size:2rem;letter-spacing:-.01em;margin-bottom:8px;color:var(--green-dark
   color:var(--cream);
   padding:88px 20px 72px;
 }
-.hero .wrap{max-width:760px}
+.hero .wrap{max-width:960px;display:flex;align-items:center;gap:56px}
+.hero-copy{flex:1;max-width:560px}
+.hero-badge{width:220px;flex:none}
+.hero-badge img{width:100%;height:auto;display:block;filter:drop-shadow(0 12px 32px rgba(0,0,0,.3))}
 .area-chip{
   display:inline-block;
   background:rgba(248,245,238,.12);
@@ -220,6 +226,8 @@ footer a{color:var(--cream)}
   .gallery{grid-template-columns:repeat(2,1fr)}
   .hero h1{font-size:2.1rem}
   .hero{padding:64px 20px 56px}
+  .hero .wrap{flex-direction:column;align-items:flex-start;gap:28px}
+  .hero-badge{width:120px;order:-1}
   section{padding:48px 20px}
   .price-card.featured{order:-1}
   .trust .wrap{grid-template-columns:1fr 1fr}
@@ -252,12 +260,17 @@ footer a{color:var(--cream)}
 
 <section class="hero" id="top">
   <div class="wrap">
-    <span class="area-chip">Westmount · NDG · Hampstead · Côte Saint-Luc</span>
-    <h1>Your dog gets a real walk. You get your day back.</h1>
-    <p>West End Walks is a neighborhood dog walking service covering Westmount, NDG, Hampstead, and Côte Saint-Luc. The same walker every time, rain or shine. Solo and group walks from $15.</p>
-    <div class="hero-buttons">
-      <a class="btn btn-light" href="#book">Book a walk</a>
-      <a class="btn btn-ghost" href="sms:15142943808">Text us</a>
+    <div class="hero-copy">
+      <span class="area-chip">Westmount · NDG · Hampstead · Côte Saint-Luc</span>
+      <h1>Your dog gets a real walk. You get your day back.</h1>
+      <p>West End Walks is a neighborhood dog walking service covering Westmount, NDG, Hampstead, and Côte Saint-Luc. The same walker every time, rain or shine. Solo and group walks from $15.</p>
+      <div class="hero-buttons">
+        <a class="btn btn-light" href="#book">Book a walk</a>
+        <a class="btn btn-ghost" href="sms:15142943808">Text us</a>
+      </div>
+    </div>
+    <div class="hero-badge">
+      <img src="logo.svg" alt="West End Walks — Montréal" width="220" height="220">
     </div>
   </div>
 </section>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <circle cx="512" cy="512" r="512" fill="#2E5D4B"/>
+  <circle cx="512" cy="512" r="464" fill="none" stroke="#F3EDE0" stroke-width="10"/>
+  <!-- paw print -->
+  <g fill="#F3EDE0">
+    <ellipse cx="512" cy="415" rx="95" ry="80"/>
+    <ellipse cx="400" cy="330" rx="34" ry="46" transform="rotate(-25 400 330)"/>
+    <ellipse cx="472" cy="285" rx="34" ry="48" transform="rotate(-8 472 285)"/>
+    <ellipse cx="552" cy="285" rx="34" ry="48" transform="rotate(8 552 285)"/>
+    <ellipse cx="624" cy="330" rx="34" ry="46" transform="rotate(25 624 330)"/>
+  </g>
+  <text x="512" y="640" text-anchor="middle" font-family="Liberation Sans" font-weight="bold" font-size="104" fill="#F3EDE0">WEST END</text>
+  <text x="512" y="750" text-anchor="middle" font-family="Liberation Sans" font-weight="bold" font-size="104" fill="#F3EDE0">WALKS</text>
+  <text x="512" y="836" text-anchor="middle" font-family="Liberation Sans" font-size="40" fill="#A8C5B4">M O N T R É A L</text>
+</svg>
