@@ -156,6 +156,26 @@ h2{font-size:2rem;letter-spacing:-.01em;margin-bottom:8px;color:var(--green-dark
 .price-card p{color:var(--muted);font-size:.94rem;margin-top:12px}
 .pricing-foot{color:var(--muted);font-size:.92rem;margin-top:22px;max-width:640px}
 
+/* ---------- Pack & payment ---------- */
+.pack-card{
+  margin-top:26px;
+  background:linear-gradient(160deg,var(--green-dark) 0%,var(--green-deep) 100%);
+  color:var(--cream);
+  border-radius:var(--radius);
+  padding:30px 26px;
+  display:flex;gap:28px;align-items:center;justify-content:space-between;flex-wrap:wrap;
+  box-shadow:var(--shadow);
+}
+.pack-card h3{font-family:var(--serif);font-size:1.3rem;color:var(--white);margin-bottom:6px}
+.pack-card p{color:rgba(248,245,238,.85);font-size:.94rem;max-width:400px}
+.pack-prices{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.pack-price{
+  background:rgba(248,245,238,.1);border:1px solid rgba(248,245,238,.22);
+  border-radius:999px;padding:7px 16px;
+  font-size:.88rem;font-weight:600;white-space:nowrap;text-align:center;
+}
+.pack-price b{color:var(--gold)}
+
 /* ---------- Steps ---------- */
 .steps-section{background:var(--white);border-top:1px solid var(--tan);border-bottom:1px solid var(--tan)}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -291,7 +311,7 @@ footer a{color:var(--cream)}
     </div>
     <div class="trust-item">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
-      Sans contrat — payez à la promenade
+      Sans contrat — comptant ou virement Interac
     </div>
   </div>
 </div>
@@ -321,6 +341,19 @@ footer a{color:var(--cream)}
         <p>Ajouté après l'heure, pour les chiens énergiques qui en veulent plus.</p>
       </div>
     </div>
+    <div class="pack-card">
+      <div>
+        <h3>Forfait de 10 promenades — 10 % de rabais</h3>
+        <p>Prépayez 10 promenades de n'importe quel type par virement Interac et obtenez 10 % de rabais. Les promenades non utilisées sont toujours remboursées, sans date limite.</p>
+      </div>
+      <div class="pack-prices">
+        <span class="pack-price">30 min solo · <b>180 $</b></span>
+        <span class="pack-price">1 heure solo · <b>270 $</b></span>
+        <span class="pack-price">30 min groupe · <b>135 $</b></span>
+        <span class="pack-price">1 heure groupe · <b>225 $</b></span>
+      </div>
+    </div>
+    <p class="pricing-foot">Payez comptant ou par virement Interac au <b>514-294-3808</b>, après la promenade ou d'avance — comme vous préférez. Le dépôt automatique est activé, donc pas de question de sécurité.</p>
     <p class="pricing-foot">Pas certain que votre chien convient au groupe? C'est à ça que sert la rencontre. Les chiens sont regroupés seulement quand on sait qu'ils s'entendent bien.</p>
   </div>
 </section>
